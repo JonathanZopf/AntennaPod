@@ -1,3 +1,6 @@
+# Dev notes
+Issues in main project: https://github.com/AntennaPod/AntennaPod/issues
+
 # AntennaPod
 
 This is the official repository of AntennaPod, the easy-to-use, flexible and open-source podcast manager for Android.
