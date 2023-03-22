@@ -3,7 +3,7 @@ Issues in main project: https://github.com/AntennaPod/AntennaPod/issues
 
 # AntennaPod
 
-This is the official repository of AntennaPod, the easy-to-use, flexible and open-source podcast manager for Android.
+This is not the official repository of AntennaPod, the easy-to-use, flexible and open-source podcast manager for Android. Its a fork of it. Obviously.
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
       alt="Get it on Google Play"
