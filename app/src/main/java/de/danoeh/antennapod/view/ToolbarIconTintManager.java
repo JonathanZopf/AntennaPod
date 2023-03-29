@@ -24,7 +24,7 @@ public abstract class ToolbarIconTintManager implements AppBarLayout.OnOffsetCha
 
     @Override
     public void onOffsetChanged(AppBarLayout appBarLayout, int offset) {
-        boolean tint  = (collapsingToolbar.getHeight() + offset) > (2 * collapsingToolbar.getMinimumHeight());
+        boolean tint  = (collapsingToolbar.getHeight() + offset) > (1.5 * collapsingToolbar.getMinimumHeight());
         if (isTinted != tint) {
             isTinted = tint;
             updateTint();

@@ -1,5 +1,6 @@
 package de.danoeh.antennapod.fragment;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.ClipData;
 import android.content.Context;
@@ -24,6 +25,8 @@ import androidx.annotation.Nullable;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import androidx.appcompat.content.res.AppCompatResources;
 import com.google.android.material.appbar.MaterialToolbar;
+
+import androidx.core.content.ContextCompat;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.fragment.app.Fragment;
 import com.bumptech.glide.Glide;
@@ -114,6 +117,12 @@ public class FeedInfoFragment extends Fragment implements MaterialToolbar.OnMenu
         toolbar.setNavigationOnClickListener(v -> getParentFragmentManager().popBackStack());
         toolbar.setOnMenuItemClickListener(this);
         refreshToolbarState();
+
+        //In order to avoid
+        Activity activity = getActivity();
+        if (activity != null) {
+            activity.getWindow().setStatusBarColor(ContextCompat.getColor(activity, R.color.background_light));
+        }
 
         AppBarLayout appBar = root.findViewById(R.id.appBar);
         CollapsingToolbarLayout collapsingToolbar = root.findViewById(R.id.collapsing_toolbar);
