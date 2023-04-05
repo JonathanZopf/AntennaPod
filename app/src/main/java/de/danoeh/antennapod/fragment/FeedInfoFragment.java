@@ -6,8 +6,11 @@ import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.graphics.LightingColorFilter;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -27,12 +30,15 @@ import androidx.appcompat.content.res.AppCompatResources;
 import com.google.android.material.appbar.MaterialToolbar;
 
 import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.fragment.app.Fragment;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.snackbar.Snackbar;
 import com.joanzapata.iconify.Iconify;
 import de.danoeh.antennapod.R;
@@ -118,15 +124,9 @@ public class FeedInfoFragment extends Fragment implements MaterialToolbar.OnMenu
         toolbar.setOnMenuItemClickListener(this);
         refreshToolbarState();
 
-        //In order to avoid
-        Activity activity = getActivity();
-        if (activity != null) {
-            activity.getWindow().setStatusBarColor(ContextCompat.getColor(activity, R.color.background_light));
-        }
-
         AppBarLayout appBar = root.findViewById(R.id.appBar);
         CollapsingToolbarLayout collapsingToolbar = root.findViewById(R.id.collapsing_toolbar);
-        ToolbarIconTintManager iconTintManager = new ToolbarIconTintManager(getContext(), toolbar, collapsingToolbar) {
+        ToolbarIconTintManager iconTintManager = new ToolbarIconTintManager(getActivity(), toolbar, collapsingToolbar) {
             @Override
             protected void doTint(Context themedContext) {
                 toolbar.getMenu().findItem(R.id.visit_website_item)
