@@ -60,6 +60,9 @@
     <string name="home_downloads_title">Manage downloads</string>
     <string name="home_welcome_title">Welcome to AntennaPod!</string>
     <string name="home_welcome_text">You are not subscribed to any podcasts yet. Open the side menu to add a podcast.</string>
+    <string name="notification_permission_text">AntennaPod needs your permission to show notifications while downloading episodes.</string>
+    <string name="notification_permission_denied">You denied the permission.</string>
+    <string name="open_settings">Open settings</string>
     <string name="configure_home">Configure Home Screen</string>
 
     <!-- Download Statistics fragment -->
@@ -485,13 +488,12 @@
     <string name="pref_compact_notification_buttons_sum">Change the playback buttons when the notification is collapsed. The play/pause button is always included.</string>
     <string name="pref_compact_notification_buttons_dialog_title">Select a maximum of %1$d items</string>
     <string name="pref_compact_notification_buttons_dialog_error">You can only select a maximum of %1$d items.</string>
-    <string name="pref_lockscreen_background_title">Set Lockscreen Background</string>
-    <string name="pref_lockscreen_background_sum">Set the lockscreen background to the current episode\'s image. As a side effect, this will also show the image in third party apps.</string>
     <string name="pref_enqueue_location_title">Enqueue Location</string>
     <string name="pref_enqueue_location_sum">Add episodes to: %1$s</string>
     <string name="enqueue_location_back">Back</string>
     <string name="enqueue_location_front">Front</string>
     <string name="enqueue_location_after_current">After current episode</string>
+    <string name="enqueue_location_random">Random</string>
     <string name="pref_smart_mark_as_played_disabled">Disabled</string>
     <string name="documentation_support">Documentation &amp; Support</string>
     <string name="visit_user_forum">User forum</string>
