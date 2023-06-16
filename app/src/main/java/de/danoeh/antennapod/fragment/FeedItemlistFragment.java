@@ -149,19 +149,6 @@ public class FeedItemlistFragment extends Fragment implements AdapterView.OnItem
         swipeActions = new SwipeActions(this, TAG).attachTo(viewBinding.recyclerView);
         viewBinding.progressBar.setVisibility(View.VISIBLE);
 
-        ToolbarIconTintManager iconTintManager = new ToolbarIconTintManager(
-                getContext(), viewBinding.toolbar, viewBinding.collapsingToolbar) {
-            @Override
-            protected void doTint(Context themedContext) {
-                viewBinding.toolbar.getMenu().findItem(R.id.refresh_item)
-                        .setIcon(AppCompatResources.getDrawable(themedContext, R.drawable.ic_refresh));
-                viewBinding.toolbar.getMenu().findItem(R.id.action_search)
-                        .setIcon(AppCompatResources.getDrawable(themedContext, R.drawable.ic_search));
-            }
-        };
-        iconTintManager.updateTint();
-        viewBinding.appBar.addOnOffsetChangedListener(iconTintManager);
-
         nextPageLoader = new MoreContentListFooterUtil(viewBinding.moreContent.moreContentListFooter);
         nextPageLoader.setClickListener(() -> {
             if (feed != null) {
