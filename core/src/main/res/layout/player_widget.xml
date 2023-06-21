@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/widget_margin"
-    tools:ignore="VectorDrawableCompat">
+    tools:ignore="VectorDrawableCompat"
+    android:background="@drawable/widget_background">
 
     <RelativeLayout
         android:id="@+id/widgetLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/widget_background"
         tools:ignore="UselessParent">
 
         <ImageButton
